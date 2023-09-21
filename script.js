@@ -1,10 +1,10 @@
 let x;
-let i = 0; 
+let i; 
 let y;
 let message;
 
-
-while (i < 1) {
+function showResult (i){
+    while (i < 1) {
     message = confirm ("Type yes or no");
     if (message == false) {
         console.log ("Робота програми завершена");
@@ -33,3 +33,6 @@ while (i < 1) {
     }
 
 }
+
+}
+showResult (0);
