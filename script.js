@@ -26,15 +26,18 @@ switch (Number(date1)) {
 
 
 
-function getDayWeek (d) {
-    let date = new Date(d);
+function getDayWeek (y, m, d) {
+    let date = new Date();
     let weekday = date.getDay();
     console.log(weekday);
     return weekday;
 }
 
-let date2 = prompt ("Type number from 0 to 6");
-getDayWeek (Number(date2));
+let year = prompt ("Type year: ");
+let month = prompt ("Type month: ");
+let day = prompt ("Type day: ");
+
+getDayWeek (parseInt(year, month, day));
 
 
 
