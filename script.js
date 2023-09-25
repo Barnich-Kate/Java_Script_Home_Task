@@ -1,3 +1,4 @@
+
 let message = prompt ("Type some information: ");
 
 if (message !== "" && message !== " ") {
@@ -7,3 +8,4 @@ if (message !== "" && message !== " ") {
 } else {
     console.log ("It is string");
 }
+
