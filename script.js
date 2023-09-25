@@ -1,3 +1,4 @@
+
 /*let date1 = prompt ("Type number from 1 to 7");
 switch (Number(date1)) {
     case 1:
@@ -34,6 +35,7 @@ function getDayWeek (d) {
 
 let date2 = prompt ("Type number from 0 to 6");
 getDayWeek (Number(date2));
+
 
 
 
