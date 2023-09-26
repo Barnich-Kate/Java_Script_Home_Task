@@ -1,3 +1,4 @@
+
 let message;
 let WeekDay = [];
 
@@ -5,15 +6,16 @@ while (message !== '0') {
     message = prompt("Введіть значення у форматі 'рік-місяць-день'. Для завершення - натисніть 0");
     if (message === '0') {
         break;
+
     }
 }
-    let date = new Date(message);
+let date = new Date(message);
 
-function getDayOfTheWeek (d) {
-    var d = new Date(message);
-    var dayOfWeek = d.getDay();
+function getDayOfTheWeek (date) {
+    var date = new Date(message);
+    var dayOfWeek = date.getDay();
     
-    switch (d.getDay()) {
+    switch (date.getDay()) {
         
         case 0:
             console.log("Неділя");
@@ -45,4 +47,6 @@ function getDayOfTheWeek (d) {
     }
 }
 
+
 getDayOfTheWeek(parseInt(message));
+
