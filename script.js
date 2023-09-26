@@ -1,38 +1,52 @@
-let x;
-let i; 
-let y;
+
 let message;
+let WeekDay = [];
 
-function showResult (i){
-    while (i < 1) {
-    message = confirm ("Type yes or no");
-    if (message == false) {
-        console.log ("Робота програми завершена");
-    } else if (message == true){
-
-        x = prompt("Type X");
-        y = prompt("Type Y from 0 to 4");
-        switch (x) {
-            case 4:
-                console.log (x*y);
-                break;
-            case 3: 
-                console.log (x*y);
-                break;
-            case 2: 
-                console.log (x*y);
-                break;
-            case 1:
-                console.log (x*y);
-                break;
-            case 0:
-                console.log (x*y);
-                break;
-        }
+while (message !== '0') {
+    message = prompt("Введіть значення у форматі 'рік-місяць-день'. Для завершення - натисніть 0");
+    if (message === '0') {
+        break;
 
     }
+}
+let date = new Date(message);
 
+function getDayOfTheWeek (date) {
+    var date = new Date(message);
+    var dayOfWeek = date.getDay();
+    
+    switch (date.getDay()) {
+        
+        case 0:
+            console.log("Неділя");
+            break;
+        case 1:
+            console.log("Понеділок");
+            break;
+        case 2: 
+            console.log("Вівторок");
+            break;
+        case 3:
+            console.log("Середа");
+            break;
+        case 4: 
+            console.log("Четвер");
+            break;
+        case 5:
+            console.log("П'ятниця");
+            break;
+        case 6:
+            console.log("Субота");
+            break;
+    }
+    if (dayOfWeek === 0 || dayOfWeek === 6) {
+        WeekDay.push(date);
+    }
+    for (let i = 0; i < WeekDay.length; i++) {
+        console.log(dayOfWeek(i));
+    }
 }
 
-}
-showResult (0);
+
+getDayOfTheWeek(parseInt(message));
+
